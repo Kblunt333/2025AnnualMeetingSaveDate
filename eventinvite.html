@@ -16,43 +16,30 @@
             align-items: center;
             background-color: #002b4e;
             overflow: hidden;
-            padding: 0; /* Removed padding from body */
-            box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
         }
         .container {
             position: relative;
             text-align: center;
             width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Ensures space between elements */
-            align-items: center;
+            height: 100vh; /* Ensure container takes full viewport height */
             box-sizing: border-box; /* Include padding in width and height */
         }
-        .background {
+        .background img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
+            object-fit: cover; /* Ensures the image covers the entire container */
             z-index: -1; /* Ensure the background is behind other content */
         }
-        .background img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image fully fits within the container */
-        }
         .buttons {
+            position: absolute;
+            bottom: 20px; /* Position buttons at the bottom */
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 70px; /* Space at the bottom for better visibility */
         }
         .button {
             background-color: #3a6592;
@@ -77,7 +64,6 @@
         <div class="background">
             <img src="https://i.imgur.com/EIHWddG.jpg" alt="Event Image">
         </div>
-        <div style="flex-grow: 1;"></div> <!-- This div will push the buttons to the bottom -->
         <div class="buttons">
             <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTdoMDAxc2lyYjhkajRvZ2QxbW83dGQ5dmcgOWY2MTZjMjE0ZTFlNjBmYTc1YTcwYzhkODkxOTQ3ZWQ5YWNmOGI3NDJlOGY4NWYyNDA4OWUyYzJmNTExZTNlNUBn&tmsrc=9f616c214e1e60fa75a70c8d891947ed9acf8b742e8f85f24089e2c2f511e3e5%40group.calendar.google.com" class="button">Add to Calendar (Google)</a>
             <a href="https://drive.google.com/uc?export=download&id=1UsD0Ancv_SeKTzLHdgZgEphcdIN2I8RS" class="button">Add to Calendar (.ical / iPhone)</a>
