@@ -51,9 +51,28 @@
             max-width: 275px; /* Ensure it doesn't get too wide on larger screens */
         }
         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
             height: 100%;
-            width: auto;
-            object-fit: cover; /* Ensures the image covers the entire container height */
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        @media (min-aspect-ratio: 16/9) {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            img {
+                height: 100%;
+                width: auto;
+            }
         }
     </style>
 </head>
