@@ -2,27 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Event</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             color: #3a6592;
-            margin: 0px;
+            margin: 0;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #002b4e;
             overflow: hidden;
+            padding: 10px; /* Added padding to the body */
+            box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
         }
         .container {
             position: relative;
             text-align: center;
             width: 100%;
             height: 100%;
-            padding: 0; /* Removed padding */
+            padding: 10px; /* Added padding */
             box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
         }
         .buttons {
@@ -50,17 +52,13 @@
             max-width: 275px; /* Ensure it doesn't get too wide on larger screens */
         }
         img {
-            height: 100%;
+            height: calc(100% - 20px); /* Adjusted height to account for padding */
             width: auto;
             object-fit: cover; /* Ensures the image covers the entire container height */
         }
         @media (max-width: 600px) {
             .container {
                 padding: 10px; /* Apply padding on smaller screens */
-            }
-            .button {
-                width: 90%; /* Slightly wider buttons on small screens */
-                max-width: none; /* Remove max-width on small screens */
             }
         }
     </style>
