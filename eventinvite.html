@@ -50,35 +50,29 @@
             width: 80%; /* Widen the button */
             max-width: 275px; /* Ensure it doesn't get too wide on larger screens */
         }
-        img {
+        .background {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            height: 100%;
             width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .background img {
+            min-width: 100%;
+            min-height: 100%;
             object-fit: cover;
-            object-position: center;
-        }
-        @media (min-aspect-ratio: 16/9) {
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-        @media (max-aspect-ratio: 16/9) {
-            img {
-                height: 100%;
-                width: auto;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://i.imgur.com/EIHWddG.jpg" alt="Event Image">
+        <div class="background">
+            <img src="https://i.imgur.com/EIHWddG.jpg" alt="Event Image">
+        </div>
         <div class="buttons">
             <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTdoMDAxc2lyYjhkajRvZ2QxbW83dGQ5dmcgOWY2MTZjMjE0ZTFlNjBmYTc1YTcwYzhkODkxOTQ3ZWQ5YWNmOGI3NDJlOGY4NWYyNDA4OWUyYzJmNTExZTNlNUBn&tmsrc=9f616c214e1e60fa75a70c8d891947ed9acf8b742e8f85f24089e2c2f511e3e5%40group.calendar.google.com" class="button">Add to Calendar (Google)</a>
             <a href="https://drive.google.com/uc?export=download&id=1UsD0Ancv_SeKTzLHdgZgEphcdIN2I8RS" class="button">Add to Calendar (.ical / iPhone)</a>
