@@ -11,8 +11,8 @@
             color: #3a6592;
             margin: 0;
             height: 100vh;
-            background: url('https://i.imgur.com/EIHWddG.jpg') no-repeat center center fixed;
-            background-size: auto;
+            background: url('https://i.imgur.com/EIHWddG.jpg') no-repeat center center;
+            background-size: contain;
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -41,6 +41,13 @@
             cursor: pointer;
             border-radius: 10px;
             width: 200px;
+        }
+        @media (max-width: 600px) {
+            .button {
+                font-size: 14px;
+                padding: 12px 24px;
+                width: 180px;
+            }
         }
     </style>
 </head>
