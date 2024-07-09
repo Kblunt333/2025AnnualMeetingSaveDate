@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Event</title>
     <style>
         body {
@@ -57,6 +57,10 @@
         @media (max-width: 600px) {
             .container {
                 padding: 10px; /* Apply padding on smaller screens */
+            }
+            .button {
+                width: 90%; /* Slightly wider buttons on small screens */
+                max-width: none; /* Remove max-width on small screens */
             }
         }
     </style>
