@@ -11,20 +11,23 @@
             color: #3a6592;
             margin: 0;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: #002b4e;
             overflow: hidden;
         }
         .container {
-            position: absolute;
-            top: 90%; /* Position the container 90% from the top */
-            left: 50%;
-            transform: translate(-50%, -50%); /* Center horizontally and adjust vertically */
+            position: relative;
             text-align: center;
             width: 100%;
-            max-width: 1200px;
-            padding: 0 10px;
+            height: 100%;
+            padding: 0 10px; /* Default padding */
         }
         .buttons {
+            position: absolute;
+            bottom: 60px; /* Adjust this value to move buttons up or down */
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -38,32 +41,28 @@
             text-decoration: none;
             display: block;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: bold; /* Bolden the text */
             margin: 10px 0;
             cursor: pointer;
             border-radius: 10px;
-            width: 80%;
-            max-width: 300px;
+            width: 80%; /* Widen the button */
+            max-width: 300px; /* Ensure it doesn't get too wide on larger screens */
         }
         img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            width: auto;
             height: 100%;
             object-fit: cover; /* Ensures the image covers the entire container */
-            z-index: -1; /* Places the image behind the container */
         }
         @media (max-width: 600px) {
             .container {
-                padding: 10px;
+                padding: 10px; /* Apply padding on smaller screens */
             }
         }
     </style>
 </head>
 <body>
-    <img src="https://i.imgur.com/EIHWddG.jpg" alt="Event Image">
     <div class="container">
+        <img src="https://i.imgur.com/EIHWddG.jpg" alt="Event Image">
         <div class="buttons">
             <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTdoMDAxc2lyYjhkajRvZ2QxbW83dGQ5dmcgOWY2MTZjMjE0ZTFlNjBmYTc1YTcwYzhkODkxOTQ3ZWQ5YWNmOGI3NDJlOGY4NWYyNDA4OWUyYzJmNTExZTNlNUBn&tmsrc=9f616c214e1e60fa75a70c8d891947ed9acf8b742e8f85f24089e2c2f511e3e5%40group.calendar.google.com" class="button">Add to Calendar (Google)</a>
             <a href="https://drive.google.com/uc?export=download&id=1UsD0Ancv_SeKTzLHdgZgEphcdIN2I8RS" class="button">Add to Calendar (.ical / iPhone)</a>
